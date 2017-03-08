@@ -1,0 +1,104 @@
+# Hexo Configuration
+## Docs: https://hexo.io/docs/configuration.html
+## Source: https://github.com/hexojs/hexo/
+
+# Site
+title: Sakuraffy
+subtitle: 愈学习，愈无知
+description:
+author: Sakuraffy
+language: 
+timezone:
+
+# URL
+## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
+url: https://sakuraffy.github.io
+root: /
+permalink: :title/
+permalink_defaults:
+
+# Directory
+source_dir: source
+public_dir: public
+tag_dir: tags
+archive_dir: archives
+category_dir: categories
+code_dir: downloads/code
+i18n_dir: :lang
+skip_render:
+
+# Writing
+new_post_name: :title.md # File name of new posts
+default_layout: post
+titlecase: false # Transform title into titlecase
+external_link: true # Open external links in new tab
+filename_case: 0
+render_drafts: false
+post_asset_folder: false
+relative_link: false
+future: true
+highlight:
+  enable: true
+  line_number: true
+  auto_detect: false
+  tab_replace:
+
+# Category & Tag
+default_category: uncategorized
+category_map:
+tag_map:
+
+# Date / Time format
+## Hexo uses Moment.js to parse and display date
+## You can customize the date format as defined in
+## http://momentjs.com/docs/#/displaying/format/
+date_format: YYYY-MM-DD
+time_format: HH:mm:ss
+
+# Pagination
+## Set per_page to 0 to disable pagination
+per_page: 8
+pagination_dir: page
+
+# Extensions
+## Plugins: https://hexo.io/plugins/
+
+image_stream:
+  jquery_lazyload: https://cdnjs.cloudflare.com/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.min.js
+  img_placeholder: https://ws4.sinaimg.cn/large/e724cbefgw1etyppy7bgwg2001001017.gif
+
+qiniu:
+  offline: false
+  sync: true
+  bucket: sakuraffy
+  # secret_file: 
+  access_key: SLuqOREmGtp0iacLhOIrrjXH06SVXiyWagYEkHhl
+  secret_key: bTVIKrlDtSqql2RKNj8kGYUr4Yw0fqOG1Fi6NFum
+  dirPrefix: static
+  urlPrefix: http://oezif1gi7.bkt.clouddn.com/static
+  up_host: http://upload.qiniu.com
+  local_dir: static
+  update_exist: true
+  image: 
+    folder: img
+    extend: 
+  js:
+    folder: js
+  css:
+    folder: css
+ 
+sitemap:
+  path: sitemap.xml 
+
+# Extensions
+## Plugins: https://hexo.io/plugins/
+## Themes: https://hexo.io/themes/
+theme: yelee
+
+# Deployment
+## Docs: https://hexo.io/docs/deployment.html
+deploy:
+- type: git
+  repository:
+      github: git@github.com:sakuraffy/sakuraffy.github.io.git
+  branch: master
